@@ -1,0 +1,57 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #dddddd;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  padding: 8px;
+}
+
+.header {
+  border-style: solid;
+  border-color: green;
+}
+
+h1 {
+  font-size: 500%;
+  text-align: center;
+}
+
+img.headerimage {
+  max-width: 15%;
+  max-height: 15%;
+  position: absolute;
+  right: 15px;
+  display: inline-block;
+}
+
+img.bodyimage {
+  max-width: 30%;
+  max-height: 30%;
+  position: absolute;
+  top: 250px;
+  left: 0px;
+  border-style: solid;
+  border-color: green;
+  display: block;
+}
+
+.ogesays {
+  border-style: solid;
+  border-color: green;
+  margin: 2px 5px 0 1px;
+  margin-right: 10px;
+}
+
+.ogeinput {
+  border-style: solid;
+  border-color: green;
+}
