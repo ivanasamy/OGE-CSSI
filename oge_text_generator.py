@@ -6,7 +6,7 @@ def split_words(inputed):
     # input is a sentence, output is a list with each word in the sentence an element
     split = inputed.split()
     return split
-
+#hello
 def two_words(text_list):
     #this function takes the list of words from the previous function as its input and produces a dictionary with the keys being every two consecutive words and the values of the keys being a list of the words that follow those two words
 	dictionary = {}
