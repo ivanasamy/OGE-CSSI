@@ -24,7 +24,7 @@ negative_responses = []
 neutral_responses = []
 positive_responses = []
 
-def responses ():
+def responses (sentiment):
     if sentiment > 0 and sentiment <0.3:
         return negative_responses[random.randint(range(len(neutral_responses)))]
     elif sentiment >= 0.3 and sentiment <0.7:
