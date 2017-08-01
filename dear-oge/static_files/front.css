@@ -4,15 +4,19 @@ body {
 
 }
 
+#responseBox{
+  padding: 30px;
+  padding-right: 40px;
+}
 
-h1{
-    border: 10px solid #760000;
+h1 {
+    border: 5px solid 	#DB7093;
     width: 45%;
     margin: 0 auto;
     padding: 20px;
     padding-bottom: 10px;
     margin-bottom: 40px;
-    margin-top: 40px;
+    margin-top: 35px;
 }
 
 .Sparkle {
@@ -53,7 +57,7 @@ h1{
 
 .Sparkle {
 
-	font-size:20px;
+	font-size:50px;
 	font-family:cursive;
   text-align: center;
 
@@ -76,6 +80,7 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: #dddddd;
+  margin-top: 60px;
 }
 
 li {
@@ -91,13 +96,6 @@ li a {
   border-style: solid;
   border-color: green;
 }
-
-h1 {
-  font-size: 500%;
-  text-align: center;
-}
-
-
 
 img.leftImage {
   padding:1px;
