@@ -44,7 +44,11 @@ class AboutPage(webapp2.RequestHandler):
         about_template = jinja_environment.get_template("templates/about.html")
         self.response.write(about_template.render())
 
+class WaysToHappyPage(webapp2.RequestHandler):
+    def get(self):
+        about_template = jinja_environment.get_template("templates/ways_to_happy.html")
+        self.response.write(about_template.render())
 
 app = webapp2.WSGIApplication([
     ('/', FrontPage),
-('/past_posts', PastPostsPage), ("/about", AboutPage)], debug=True)
+('/past_posts', PastPostsPage), ("/about", AboutPage), ("/waystohappy", WaysToHappyPage)], debug=True)

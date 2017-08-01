@@ -18,6 +18,41 @@ body {
 }
 
 
+.ogesays {
+  border-style: solid;
+  border-color: green;
+  margin: 2px 5px 0 1px;
+  margin-right: 10px;
+}
+
+.ogeinput {
+  border-style: solid;
+  border-color: green;
+}
+
+.floating-box {
+    float: left;
+    width: 350px;
+    height: 500px;
+    margin: 5px;
+    border: 3px solid #73AD21;
+}
+
+
+.Sparkle {
+
+	font-size:20px;
+	font-family:cursive;
+  text-align: center;
+
+ -webkit-text-fill-color: transparent;
+ background: -webkit-linear-gradient(transparent, transparent),
+             url(http://www.myspacehippo.com/files/glitterbacks/bg345.gif) repeat;
+ background: -o-linear-gradient(transparent, transparent);
+ -webkit-background-clip: text;
+}
+
+
 .responseBox{
   padding-bottom: 40px;
 }
@@ -89,16 +124,34 @@ img.bodyImage{
 }
 
 
-
-
-.ogesays {
-  border-style: solid;
-  border-color: green;
-  margin: 2px 5px 0 1px;
-  margin-right: 10px;
+h2 {
+  text-align:center;
 }
 
-.ogeinput {
-  border-style: solid;
-  border-color: green;
+p {
+  text-align:center;
+}
+
+body {
+  background:pink;
+
+
+}
+
+.Tatiana {
+max-height: 300px;
+display: block;
+margin: 0 auto;
+}
+
+.Ivana {
+max-height: 300px;
+display: block;
+margin: 0 auto;
+}
+
+.Oge {
+max-height: 200px;
+display: block;
+margin: 0 auto;
 }
