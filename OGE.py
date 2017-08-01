@@ -25,12 +25,9 @@ neutral_responses = ["A quote I believe applies to a lot of what we do in life i
 positive_responses = ["Congratulations! You seem to be happy and that’s great! Life is short so enjoying it to its fullest is something special!",
 "Your happiness is something to be admired! You’re so lucky that things are working out in your life and I hope that things continue to work out!", "That’s wonderful! As an experienced giver of relationship advice, it is always great to hear about people whose lives are filled with joy", "I’m so happy for you! Your joy brings me joy as well!", "Good for you! May happiness forever be in your life!"]
 
-def responses (sentiment):
-    if sentiment > 0 and sentiment <0.3:
-        return negative_responses[random.randint(range(len(neutral_responses)))]
-    elif sentiment >= 0.3 and sentiment <0.7:
-        return neutral_responses[random.randint(range(len(neutral_responses)))]
-    else:
-        return positive_responses[random.randint(range(len(positive_responses)))]
-
-print responses(sentiment)
+if sentiment > 0 and sentiment <0.3:
+    print negative_responses[random.randint(range(len(neutral_responses)))]
+elif sentiment >= 0.3 and sentiment <0.7:
+    print neutral_responses[random.randint(range(len(neutral_responses)))]
+else:
+    print positive_responses[random.randint(range(len(positive_responses)))]
