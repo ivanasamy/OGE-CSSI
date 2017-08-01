@@ -63,6 +63,8 @@ img.leftImage {
 }
 
 img.rightImage {
+  border-width:medium;
+  border-color: black;
   top: 20px;
   align: right;
   padding-right: 16px;
