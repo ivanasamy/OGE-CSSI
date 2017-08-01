@@ -1,8 +1,7 @@
 import requests
 import random
 headers = {'content-type': 'application/json', "Ocp-Apim-Subscription-Key": "3338f3285193465e907eb03a5b2b214a", "Accept": "application/json"}
-
-input = "Dear Oge Letter"
+input = "I love life. I am so happy!"
 
 request_body = {
      "documents": [
@@ -32,4 +31,4 @@ def responses (sentiment):
     else:
         return positive_responses[random.randint(range(len(positive_responses)))]
 
-#print(keywords.text)
+print sentiment
