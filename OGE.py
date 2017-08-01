@@ -1,12 +1,7 @@
 import requests
 import random
 headers = {'content-type': 'application/json', "Ocp-Apim-Subscription-Key": "3338f3285193465e907eb03a5b2b214a", "Accept": "application/json"}
-
-<<<<<<< HEAD
 input = "I love life. I am so happy!"
-=======
-input = "Dear Oge Letter"
->>>>>>> 989b51565a03053a38bd576a6e35cc693027156a
 
 request_body = {
      "documents": [
