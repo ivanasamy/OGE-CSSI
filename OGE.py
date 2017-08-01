@@ -1,7 +1,7 @@
 import requests
 headers = {'content-type': 'application/json', "Ocp-Apim-Subscription-Key": "3338f3285193465e907eb03a5b2b214a", "Accept": "application/json"}
 
-input = "Dear Oge, I am so upset that my boyfriend left me for another girl. What do I do?"
+input = "I love life. I am so happy!"
 
 request_body = {
      "documents": [
@@ -21,4 +21,4 @@ sentiment = sentiment_1.json()["documents"][0]["score"]
 
 
 
-#print(keywords.text)
+print sentiment
