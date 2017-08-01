@@ -1,0 +1,84 @@
+
+body {
+  background-color: pink;
+
+}
+
+.Sparkle {
+
+	font-size:20px;
+	font-family:cursive;
+  text-align: center;
+
+ -webkit-text-fill-color: transparent;
+ background: -webkit-linear-gradient(transparent, transparent),
+             url(http://www.myspacehippo.com/files/glitterbacks/bg345.gif) repeat;
+ background: -o-linear-gradient(transparent, transparent);
+ -webkit-background-clip: text;
+}
+
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #dddddd;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  padding: 8px;
+}
+
+.header {
+  border-style: solid;
+  border-color: green;
+}
+
+h1 {
+  font-size: 500%;
+  text-align: center;
+}
+
+
+
+img.leftImage {
+  top: 20px;
+  padding-left: 16px;
+  max-width: 350px;
+  max-height: 30%;
+  position: absolute;
+  left:4px;
+  bottom: auto;
+}
+
+img.bodyImage {
+  top:700px;
+  padding-top: 240;
+  padding-left: 16px;
+  max-width: 800px;
+  max-height: 400px;
+  position: absolute;
+  bottom: auto;
+}
+
+
+
+
+.ogesays {
+  border-style: solid;
+  border-color: green;
+  margin: 2px 5px 0 1px;
+  margin-right: 10px;
+}
+
+.ogeinput {
+  border-style: solid;
+  border-color: green;
+}
