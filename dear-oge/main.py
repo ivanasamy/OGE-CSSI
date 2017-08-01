@@ -18,7 +18,7 @@ from models import post_model
 import jinja2
 import os
 import webapp2
-from OGE import oge_response
+
 
 jinja_environment = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
@@ -31,8 +31,7 @@ class FrontPage(webapp2.RequestHandler):
         name = self.request.get("username")
         input_post = post_model(text = letter, user = name)
         storing_in_DB = input_post.put()
-        response = oge_response(letter)
-        self.response.write()
+
 
 
 
