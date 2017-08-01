@@ -49,9 +49,10 @@ h1 {
     width: 350px;
     height: 500px;
     margin: 5px;
-    border:1px; border-color: red;
     vertical-align: middle;
-    padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto
+    margin: auto;
+    border:3px solid red;
+    background: #ff80ff
 }
 
 
