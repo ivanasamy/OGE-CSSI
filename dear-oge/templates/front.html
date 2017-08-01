@@ -18,17 +18,20 @@
    </div>
 
 
-    <ul>
-      <li><a href="/Users/css/Desktop/OGE-CSSI/dear-oge/templates/ways_to_happy.html">Ways To Be Happy</a></li>
-      <li><a href="">Past</a></li>
-      <li><a href="/Users/css/Desktop/OGE-CSSI/dear-oge/templates/about.html">About</a></li>
-    </ul>
+  <ul>
+    <li><a href="http://localhost:13080/">Ask your Question</a></li>
+    <li><a href="http://localhost:13080/waystohappy">Ways To Be Happy</a></li>
+    <li><a href="">Past</a></li>
+    <li><a href="http://localhost:13080/about">About</a></li>
+  </ul>
 
 
     <div align="center">
       <h2> What would you like to ask Oge?</h2>
       <form name = "input_form" action = "/" method = "post">
        <textarea name="message" rows="10" cols="100"></textarea>
+       <br>
+       Name: <input name = "username" type = "text"> </input>
       <br>
       <button onclick="question()">Submit</button>
     </form>
