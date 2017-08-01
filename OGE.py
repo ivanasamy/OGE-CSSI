@@ -15,10 +15,9 @@ request_body = {
  }
 
 
-#keyword = requests.post('https://westus.api.cognitive.microsoft.com/text/analytics/v2.0/keyPhrases', json= request_body, headers = headers)
 sentiment_call = requests.post('https://westus.api.cognitive.microsoft.com/text/analytics/v2.0/sentiment', json= request_body, headers = headers)
 sentiment = sentiment_call.json()["documents"][0]["score"]
-#keywords = keyword.json()["documents"][0]["keyPhrases"]
+
 
 negative_responses = []
 neutral_responses = []
