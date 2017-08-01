@@ -29,9 +29,9 @@ class FrontPage(webapp2.RequestHandler):
     def post(self):
         letter = self.request.get("message")
         name = self.request.get("username")
-        answer = oge_response(letter)
-        input_post = post_model(text = letter, user = name, out = answer)
+        input_post = post_model(text = letter, user = name)
         storing_in_DB = input_post.put()
+        answer = oge_response(letter)
         front_template = jinja_environment.get_template("templates/front.html")
         self.response.write(front_template.render({'answer': answer}))
 
