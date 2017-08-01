@@ -65,7 +65,7 @@ img.rightImage {
   max-width: 400px;
   max-height: 30%;
   position: absolute;
-  left:4px;
+  right:4px;
   bottom: auto;
 
 img.bodyImage {
