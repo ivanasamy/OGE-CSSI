@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-from models.py import post_model
+from models import post_model
 import jinja2
 import os
 import webapp2
