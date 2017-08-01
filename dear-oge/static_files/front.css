@@ -57,7 +57,7 @@ img.leftImage {
   border:10px solid #800000;
   top: 15px;
   align: left;
-  width: 225px;
+  width: 290px;
   height: 240px;
   position: absolute;
   left: 20px;
@@ -69,7 +69,7 @@ img.rightImage {
   border:10px solid #800000;
   top: 15px;
   align: right;
-  width: 225px;
+  width: 290px;
   height: 240px;
   position: absolute;
   right: 20px;
