@@ -24,6 +24,10 @@ class FrontPage(webapp2.RequestHandler):
     def get(self):
         front_template = jinja_environment.get_template("templates/front.html")
         self.response.write(front_template.render())
+    def post(self):
+        letter = self.request.get("message")
+
+        self.response.write(letter)
 
 class PastPostsPage(webapp2.RequestHandler):
     def get(self):

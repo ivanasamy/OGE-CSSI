@@ -3,7 +3,7 @@
 <head>
   <link rel = "stylesheet" href ="/resources/front.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src= "front.js"> </script>
+  <script src= "/resources/front.js"> </script>
   <title>Dear Oge</title>
 </head>
 
@@ -16,19 +16,19 @@
 
 
     <ul>
-      <li><a href="file:///Users/css/Documents/CSSI/dear_oge_final_project/ways_to_happy.html">Ways To Be Happy</a></li>
-      <li><a href="#past">Past</a></li>
-      <li><a href="#about">About</a></li>
-
+      <li><a href="/Users/css/Desktop/OGE-CSSI/dear-oge/templates/ways_to_happy.html">Ways To Be Happy</a></li>
+      <li><a href="">Past</a></li>
+      <li><a href="/Users/css/Desktop/OGE-CSSI/dear-oge/templates/about.html">About</a></li>
     </ul>
-
 
 
     <div align="center">
       <h2> What would you like to ask Oge?</h2>
-      <textarea name="message" rows="10" cols="100"></textarea>
+      <form name = "input_form" action = "/" method = "post">
+       <textarea name="message" rows="10" cols="100"></textarea>
       <br>
       <button onclick="question()">Submit</button>
+    </form>
     </div>
 
     <br>
