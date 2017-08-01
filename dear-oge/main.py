@@ -14,10 +14,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-from models.py import post_model
+from models import post_model
 import jinja2
 import os
 import webapp2
+from OGE import oge_response
 
 jinja_environment = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
@@ -28,8 +29,10 @@ class FrontPage(webapp2.RequestHandler):
     def post(self):
         letter = self.request.get("message")
         name = self.request.get("username")
-        input_post = post_model(text = letter, username = name)
+        input_post = post_model(text = letter, user = name)
         storing_in_DB = input_post.put()
+        response = oge_response(letter)
+        self.response.write()
 
 
 
@@ -39,6 +42,7 @@ class PastPostsPage(webapp2.RequestHandler):
         self.response.write(past_template.render())
         #gonna have to use storing_in_DB.get.username() for getting name, time etc
         #do i wanna use
+
 class AboutPage(webapp2.RequestHandler):
     def get(self):
         about_template = jinja_environment.get_template("templates/about.html")
