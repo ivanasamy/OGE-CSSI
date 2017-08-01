@@ -18,6 +18,10 @@ body {
 }
 
 
+.responseBox{
+  padding-bottom: 40px;
+}
+
 
 ul {
   list-style-type: none;
@@ -51,14 +55,27 @@ h1 {
 img.leftImage {
   top: 20px;
   padding-left: 16px;
-  max-width: 350px;
+  max-width: 400px;
   max-height: 30%;
   position: absolute;
   left:4px;
   bottom: auto;
 }
 
-img.bodyImage {
+img.rightImage {
+  top: 20px;
+  align: right;
+  padding-right: 16px;
+  max-width: 400px;
+  max-height: 30%;
+  position: absolute;
+  right:4px;
+  bottom: auto;
+}
+
+
+
+img.bodyImage{
   top:700px;
   padding-top: 240;
   padding-left: 16px;
