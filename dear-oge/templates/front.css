@@ -18,6 +18,10 @@ body {
 }
 
 
+.responseBox{
+  padding-bottom: 30px;
+}
+
 
 ul {
   list-style-type: none;
