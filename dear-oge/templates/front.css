@@ -58,6 +58,16 @@ img.leftImage {
   bottom: auto;
 }
 
+img.rightImage {
+  top: 20px;
+  align: right;
+  padding-right: 16px;
+  max-width: 400px;
+  max-height: 30%;
+  position: absolute;
+  left:4px;
+  bottom: auto;
+
 img.bodyImage {
   top:700px;
   padding-top: 240;
