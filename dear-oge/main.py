@@ -14,6 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+from models.py import post_model
 import jinja2
 import os
 import webapp2
@@ -26,14 +27,18 @@ class FrontPage(webapp2.RequestHandler):
         self.response.write(front_template.render())
     def post(self):
         letter = self.request.get("message")
+        name = self.request.get("username")
+        input_post = post_model(text = letter, username = name)
+        storing_in_DB = input_post.put()
 
-        self.response.write(letter)
+
 
 class PastPostsPage(webapp2.RequestHandler):
     def get(self):
         past_template = jinja_environment.get_template("templates/past.html")
         self.response.write(past_template.render())
-
+        #gonna have to use storing_in_DB.get.username() for getting name, time etc
+        #do i wanna use
 class AboutPage(webapp2.RequestHandler):
     def get(self):
         about_template = jinja_environment.get_template("templates/about.html")
