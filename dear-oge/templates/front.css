@@ -67,8 +67,11 @@ img.rightImage {
   position: absolute;
   right:4px;
   bottom: auto;
+}
 
-img.bodyImage {
+
+
+img.bodyImage{
   top:700px;
   padding-top: 240;
   padding-left: 16px;
