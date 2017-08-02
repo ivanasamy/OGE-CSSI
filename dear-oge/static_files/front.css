@@ -50,14 +50,25 @@ ul {
   margin-top: 60px;
   font-family: cursive;
   color: #DDD5D0;
+  text-align: center;
 }
 
-li {
-  float: left;
+li { display: inline;
+}
+
+a:link {
+  color: #7D1D3F;
+}
+
+a:visited {
+  color: #7D1D3F;
+}
+
+a:hover {
+  color: white;
 }
 
 li a {
-  display: block;
   padding: 8px;
 }
 
