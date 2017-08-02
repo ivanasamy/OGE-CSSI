@@ -8,6 +8,7 @@ from google.appengine.api import urlfetch
 headers = {'content-type': 'application/json', "Ocp-Apim-Subscription-Key": "3338f3285193465e907eb03a5b2b214a", "Accept": "application/json"}
 
 def oge_response(response):
+    parsed_res = response.split()
     request_body = { "documents": [{"language": "en",
          "id": "1",
          "text": response,
@@ -32,6 +33,19 @@ def oge_response(response):
     neutral_responses = ["A quote I believe applies to a lot of what we do in life is 'If something is too hard, either you are not doing it right or it is not worth doing'", "The opportunity for success is there, you just need to acknowledge its presence and grasp it" , "In anything you do, you are only as good as you think you are."]
 #hello
     positive_responses = ["Congratulations! You seem to be happy and that’s great! Life is short so enjoying it to its fullest is something special!", "Your happiness is something to be admired! You’re so lucky that things are working out in your life and I hope that things continue to work out!", "That’s wonderful! As an experienced giver of relationship advice, it is always great to hear about people whose lives are filled with joy", "I’m so happy for you! Your joy brings me joy as well!", "Good for you! May happiness forever be in your life!"]
+    emoji_dic = {
+    "😀": "Happy Face",
+    "😉": "Winking Face",
+    "😗": "Kissing Face",
+    "😏": "Smirking Face",
+    "😢": "Crying Face",
+    "👩": "Woman",
+    "🍑": "peach",
+    "🍆": "eggplant"
+    }
+    for ele in parsed_res:
+        if ele in emoji_dic:
+            return "I'm sorry, I don't know what %s means" % emoji_dic[ele]
     if sentiment > 0 and sentiment <0.3:
         return negative_responses[random.randint(0, len(negative_responses)-1)]
     elif sentiment >= 0.3 and sentiment <0.7:
