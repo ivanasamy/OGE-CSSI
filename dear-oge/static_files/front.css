@@ -1,9 +1,9 @@
 body {
-  background-color: pink;
+  background-color: #FF6E7A;
 }
 
 h1 {
-  border: 5px solid #DB7093;
+  border: 5px solid #E85D58;
   width: 45%;
   margin: 0 auto;
   padding: 20px;
@@ -84,7 +84,7 @@ li a {
 
 img.leftImage {
   padding: 1px;
-  border: 10px solid #800000;
+  border: 10px solid #E85D58;
   top: 15px;
   align: left;
   width: 225px;
@@ -96,7 +96,7 @@ img.leftImage {
 
 img.rightImage {
   padding: 1px;
-  border: 10px solid #800000;
+  border: 10px solid #E85D58;
   top: 15px;
   align: right;
   width: 225px;
@@ -121,10 +121,6 @@ h2 {
 
 p {
   text-align: center;
-}
-
-body {
-  background: pink;
 }
 
 .Tatiana {
