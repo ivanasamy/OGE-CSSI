@@ -43,12 +43,15 @@ h1 {
 }
 
 ul {
+  
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #dddddd;
   margin-top: 60px;
+  font-family: cursive;
+  color: #DDD5D0;
 }
 
 li {
@@ -125,8 +128,6 @@ p {
   display: block;
   margin: 0 auto;
 }
-
-
 
 #responseBox {
   margin-left: 30%;
