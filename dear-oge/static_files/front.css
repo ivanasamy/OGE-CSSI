@@ -43,7 +43,7 @@ h1 {
 }
 
 ul {
-  
+
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -52,14 +52,13 @@ ul {
   margin-top: 60px;
   font-family: cursive;
   color: #DDD5D0;
+  text-align: center;
 }
 
-li {
-  float: left;
+li { display: inline;
 }
 
 li a {
-  display: block;
   padding: 8px;
 }
 
