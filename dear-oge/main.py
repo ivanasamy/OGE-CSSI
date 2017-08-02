@@ -57,4 +57,4 @@ class WaysToHappyPage(webapp2.RequestHandler):
 
 app = webapp2.WSGIApplication([
     ('/', FrontPage),
-('/past_posts', PastPostsPage), ("/about", AboutPage), ("/waystohappy", WaysToHappyPage)], debug=True)
+('/past', PastPostsPage), ("/about", AboutPage), ("/waystohappy", WaysToHappyPage)], debug=True)
