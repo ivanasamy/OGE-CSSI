@@ -9,6 +9,8 @@ headers = {'content-type': 'application/json', "Ocp-Apim-Subscription-Key": "333
 
 def oge_response(response):
     parsed_res = response.split()
+    if len(parsed_res) == 0:
+        return "How can Oge give advice if you don't write anything?"
     request_body = { "documents": [{"language": "en",
          "id": "1",
          "text": response,
