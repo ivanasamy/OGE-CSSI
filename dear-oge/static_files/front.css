@@ -56,6 +56,18 @@ li {
   float: left;
 }
 
+a:link {
+  color: #7D1D3F;
+}
+
+a:visited {
+  color: #7D1D3F;
+}
+
+a:hover {
+  color: white;
+}
+
 li a {
   display: block;
   padding: 8px;
