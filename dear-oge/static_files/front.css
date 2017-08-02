@@ -56,6 +56,18 @@ ul {
 li { display: inline;
 }
 
+a:link {
+  color: #7D1D3F;
+}
+
+a:visited {
+  color: #7D1D3F;
+}
+
+a:hover {
+  color: white;
+}
+
 li a {
   padding: 8px;
 }
