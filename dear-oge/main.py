@@ -32,7 +32,7 @@ class FrontPage(webapp2.RequestHandler):
         name = self.request.get("username")
         answer = oge_response(letter)
         input_post = post_model(text = letter, user = name, out = answer)
-        storing_in_DB = input_post.put()
+        input_post.put()
         front_template = jinja_environment.get_template("templates/front.html")
         self.response.write(front_template.render({'answer': answer}))
 
@@ -45,8 +45,10 @@ class PastPosts(ndb.Model):
 
 class PastPostsPage(webapp2.RequestHandler):
     def get(self):
+        query = post_model.query()
+        responses = query.fetch()
         past_template = jinja_environment.get_template("templates/past.html")
-        self.response.write(past_template.render())
+        self.response.write(past_template.render({'responses':responses}))
         #gonna have to use storing_in_DB.get.username() for getting name, time etc
         #do i wanna use
 
