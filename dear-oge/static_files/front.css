@@ -107,11 +107,11 @@ img.rightImage {
 }
 
 img.bodyImage {
-  top: 700px;
-  padding-left: 16px;
+  padding: 20px;
   position: absolute;
   bottom: auto;
   width: 25%;
+  height: 400px;
   align: left;
 }
 
