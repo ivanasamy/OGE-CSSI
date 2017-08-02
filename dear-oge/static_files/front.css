@@ -50,10 +50,10 @@ ul {
   margin-top: 60px;
   font-family: cursive;
   color: #DDD5D0;
+  text-align: center;
 }
 
-li {
-  float: left;
+li { display: inline;
 }
 
 a:link {
@@ -69,7 +69,6 @@ a:hover {
 }
 
 li a {
-  display: block;
   padding: 8px;
 }
 
