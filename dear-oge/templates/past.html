@@ -6,6 +6,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="/resources/front.js">
   </script>
+  <style>
+table, th, td {
+    border: 1px solid black;
+}
+</style>
   <title>Dear Oge</title>
 </head>
 
@@ -26,22 +31,18 @@
       <li><a href="http://localhost:13080/about">About</a></li>
     </ul>
 
-    <table style="width:100%">
+    <table style="width:50%" align="center">
       <tr>
-        <th>Name</th>
-        <th>Question</th>
-        <th>Answer</th>
-        <th>Time</th>
+        {% for item in responses %}
+        <th align="left" width="50%"><h2>Name:</h2> {{ item.user }}</th>
+        <th align="right"><h2>Date and Time:</h2>{{ item.time_stamp.strftime("%Y-%m-%d %H:%M ") }} (UTC) </th>
       </tr>
-      {% for item in responses %}
       <tr>
-        <td>{{ item.user }}</td>
-        <td>{{ item.text }}</td>
-        <td>{{ item.out }}</td>
-        <td>{{ item.time_stamp }}</td>
+        <td>Input: {{ item.text }}<br>Output: {{ item.out }}</td>
       </tr>
       {% endfor %}
     </table>
+
 </body>
 
 </html>

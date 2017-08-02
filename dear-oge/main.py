@@ -45,7 +45,7 @@ class PastPosts(ndb.Model):
 
 class PastPostsPage(webapp2.RequestHandler):
     def get(self):
-        query = post_model.query()
+        query = post_model.query().order(-post_model.time_stamp)
         responses = query.fetch()
         past_template = jinja_environment.get_template("templates/past.html")
         self.response.write(past_template.render({'responses':responses}))
