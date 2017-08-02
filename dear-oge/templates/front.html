@@ -31,7 +31,7 @@
   <div align="center">
     <h2> What would you like to ask Oge?</h2>
     <form name="input_form" action="/" method="post">
-      <textarea name="message" rows="10" cols="100"></textarea>
+      <textarea id = "text_area_box" name="message" rows="5" cols="75"></textarea>
       <br> Name: <input name="username" type="text"> </input>
       <br>
       <button onclick="question()">Submit</button>
@@ -46,7 +46,7 @@
     <div id="leftBottomOge">
       <img class="bodyImage" src="http://i.imgur.com/jjyEbO9.gif">
     </div>
-    <div id="responseBox" align = "right">
+    <div id="responseBox">
       <h2> Oge Says:</h2>
       <div id="output">
         {{answer}}
