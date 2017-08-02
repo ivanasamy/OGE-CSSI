@@ -38,7 +38,8 @@ table, th, td {
         <th align="right"><h2>Date and Time:</h2>{{ item.time_stamp.strftime("%Y-%m-%d %H:%M ") }} (UTC) </th>
       </tr>
       <tr>
-        <td>Input: {{ item.text }}<br>Output: {{ item.out }}</td>
+        <td>{{ item.text }}</td>
+        <td>{{ item.out }}</td>
       </tr>
       {% endfor %}
     </table>
