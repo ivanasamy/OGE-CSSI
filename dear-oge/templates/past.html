@@ -29,24 +29,14 @@
         <th>Answer</th>
         <th>Time</th>
       </tr>
+      {% for item in responses %}
       <tr>
-        <td>stuff</td>
-        <td>stuff</td>
-        <td>stuff</td>
-        <td>stuff</td>
+        <td>{{ item.user }}</td>
+        <td>{{ item.text }}</td>
+        <td>{{ item.out }}</td>
+        <td>{{ item.time_stamp }}</td>
       </tr>
-      <tr>
-        <td>stuff</td>
-        <td>stuff</td>
-        <td>stuff</td>
-        <td>stuff</td>
-      </tr>
-      <tr>
-        <td>stuff</td>
-        <td>stuff</td>
-        <td>stuff</td>
-        <td>stuff</td>
-      </tr>
+      {% endfor %}
     </table>
 </body>
 </html>
