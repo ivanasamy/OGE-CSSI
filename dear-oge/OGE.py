@@ -30,7 +30,7 @@ def oge_response(response):
     "Your feelings are unfortunate, and I would suggest this quote by Martian Manhunter, The future is worth it. All the pain. All the tears. The future is worth the fight"]
 
     neutral_responses = ["A quote I believe applies to a lot of what we do in life is 'If something is too hard, either you are not doing it right or it is not worth doing'", "The opportunity for success is there, you just need to acknowledge its presence and grasp it" , "In anything you do, you are only as good as you think you are."]
-
+#hello
     positive_responses = ["Congratulations! You seem to be happy and that’s great! Life is short so enjoying it to its fullest is something special!", "Your happiness is something to be admired! You’re so lucky that things are working out in your life and I hope that things continue to work out!", "That’s wonderful! As an experienced giver of relationship advice, it is always great to hear about people whose lives are filled with joy", "I’m so happy for you! Your joy brings me joy as well!", "Good for you! May happiness forever be in your life!"]
     if sentiment > 0 and sentiment <0.3:
         return negative_responses[random.randint(0, len(negative_responses)-1)]
