@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <link rel = "stylesheet" href ="/resources/front.css" />
+  <link rel="stylesheet" href="/resources/front.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src= "/resources/front.js"> </script>
+  <script src="/resources/front.js">
+  </script>
   <title>Dear Oge</title>
 </head>
 
-  <body>
-  <div id = "coverBanner">
-    <img class ="leftImage" src = "http://i.imgur.com/jjyEbO9.gif">
-    <img class ="rightImage" src = "http://i.imgur.com/jjyEbO9.gif">
+<body>
+  <div id="coverBanner">
+    <img class="leftImage" src="http://i.imgur.com/jjyEbO9.gif">
+    <img class="rightImage" src="http://i.imgur.com/jjyEbO9.gif">
   </div>
 
-    <div class="Sparkle">
-      <h1> Dear Oge </h1>
-   </div>
+  <div class="Sparkle">
+    <h1> Dear Oge </h1>
+  </div>
 
 
   <ul>
@@ -26,30 +28,32 @@
   </ul>
 
 
-    <div align="center">
-      <h2> What would you like to ask Oge?</h2>
-      <form name = "input_form" action = "/" method = "post">
-       <textarea name="message" rows="10" cols="100"></textarea>
-       <br>
-       Name: <input name = "username" type = "text"> </input>
+  <div align="center">
+    <h2> What would you like to ask Oge?</h2>
+    <form name="input_form" action="/" method="post">
+      <textarea id = "text_area_box" name="message" rows="5" cols="75"></textarea>
+      <br> Name: <input name="username" type="text"> </input>
       <br>
       <button onclick="question()">Submit</button>
     </form>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <div id="bottomFrontPage">
+    <div id="leftBottomOge">
+      <img class="bodyImage" src="http://i.imgur.com/jjyEbO9.gif">
     </div>
-
-    <br>
-    <br>
-    <br>
-    <br>
-
-      <img class ="bodyImage" src = "http://i.imgur.com/jjyEbO9.gif">
-        <div align="right", id = "responseBox">
-          <h2> Oge Says:</h2>
-          <textarea id="output" rows="30" cols="100">
-            {{answer}}
-        </textarea>
+    <div id="responseBox">
+      <h2> Oge Says:</h2>
+      <div id="output">
+        {{answer}}
+      </div>
     </div>
+  </div>
+  <script src="dearoge.js"></script>
+</body>
 
-    <script src="dearoge.js"></script>
-  </body>
 </html>
