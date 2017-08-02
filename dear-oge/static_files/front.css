@@ -32,8 +32,7 @@ h1 {
   margin: 5px;
   vertical-align: middle;
   margin: auto;
-  border: 3px solid red;
-  background: #ff80ff
+  border: color: #7D1D3F;
 }
 
 
@@ -43,7 +42,7 @@ h1 {
 }
 
 ul {
-  
+
   list-style-type: none;
   margin: 0;
   padding: 0;
