@@ -19,6 +19,7 @@ import jinja2
 import os
 import webapp2
 from OGE import oge_response
+from google.appengine.ext import ndb
 
 jinja_environment = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
@@ -35,7 +36,11 @@ class FrontPage(webapp2.RequestHandler):
         front_template = jinja_environment.get_template("templates/front.html")
         self.response.write(front_template.render({'answer': answer}))
 
-
+class PastPosts(ndb.Model):
+    name = ndb.StringProperty()
+    question = ndb.StringProperty()
+    time = ndb.DateTimeProperty()
+    answer = ndb.StringProperty()
 
 
 class PastPostsPage(webapp2.RequestHandler):
