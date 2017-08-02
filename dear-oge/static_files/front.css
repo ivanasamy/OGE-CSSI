@@ -1,9 +1,9 @@
 body {
-  background-color: #FF6E7A;
+  background-color: #DDD5D0;
 }
 
 h1 {
-  border: 5px solid #E85D58;
+  border: 5px solid #7D1D3F;
   width: 45%;
   margin: 0 auto;
   padding: 20px;
@@ -87,7 +87,7 @@ li a {
 
 img.leftImage {
   padding: 1px;
-  border: 10px solid #E85D58;
+  border: 10px solid #7D1D3F;
   top: 15px;
   align: left;
   width: 225px;
@@ -99,7 +99,7 @@ img.leftImage {
 
 img.rightImage {
   padding: 1px;
-  border: 10px solid #E85D58;
+  border: 10px solid #7D1D3F;
   top: 15px;
   align: right;
   width: 225px;
@@ -120,6 +120,8 @@ img.bodyImage {
 
 h2 {
   text-align: center;
+  color: #7D1D3F;
+  font-family: cursive;
 }
 
 p {
