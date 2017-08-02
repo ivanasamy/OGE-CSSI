@@ -13,9 +13,9 @@ h1 {
 }
 
 .Sparkle {
-
-	font-size:100px;
-	font-family:impact;
+  text-align: center;
+	font-size:50px;
+	font-family: cursive;
 
  -webkit-text-fill-color: transparent;
  background: -webkit-linear-gradient(transparent, transparent),
