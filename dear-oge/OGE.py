@@ -37,13 +37,13 @@ def oge_response(response):
 #
     positive_responses = ["Congratulations! You seem to be happy and that’s great! Life is short so enjoying it to its fullest is something special!", "Your happiness is something to be admired! You’re so lucky that things are working out in your life and I hope that things continue to work out!", "That’s wonderful! As an experienced giver of relationship advice, it is always great to hear about people whose lives are filled with joy", "I’m so happy for you! Your joy brings me joy as well!", "Good for you! May happiness forever be in your life!"]
     emoji_dic = {
-    "😀": "Happy Face",
-    "😉": "Winking Face",
-    "😗": "Kissing Face",
-    "😏": "Smirking Face",
-    "😢": "Crying Face",
-    "👩": "Woman",
-    "🍑": "peach",
+    "happy": "😀",
+    "winking": "😉",
+    "kissing": "😗",
+    "smirking": "😏",
+    "crying": "😢",
+    "woman": "👩",
+    "peach": "🍑",
     "🍆": "eggplant"
     }
     for ele in parsed_res:
@@ -55,6 +55,3 @@ def oge_response(response):
         return "NEUTRAL"
     else:
         return positive_responses[random.randint(0, len(positive_responses)-1)]
-
-def store_quote(quote):
-    return quote

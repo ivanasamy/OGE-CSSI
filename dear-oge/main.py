@@ -19,10 +19,14 @@ import jinja2
 import os
 import webapp2
 from OGE import oge_response
-from OGE import store_quote
 from google.appengine.ext import ndb
 
 jinja_environment = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
+
+class MainPage(webapp2.RequestHandler):
+    def get(self):
+        about_template = jinja_environment.get_template("templates/main.html")
+        self.response.write(about_template.render())
 
 class FrontPage(webapp2.RequestHandler):
     def get(self):
@@ -37,13 +41,6 @@ class FrontPage(webapp2.RequestHandler):
         if answer != "NEUTRAL":
             input_post = post_model(text = letter, user = name, out = answer)
             input_post.put()
-    def put(self):
-        neutral_quote = self.request.get("out")
-        letter = self.request.get("message")
-        name = self.request.get("username")
-        input_post = post_model(text = letter, user = name, out = neutral_quote)
-        input_post.put()
-
 
 
 class PastPosts(ndb.Model):
@@ -62,6 +59,14 @@ class PastPostsPage(webapp2.RequestHandler):
         #gonna have to use storing_in_DB.get.username() for getting name, time etc
         #do i wanna use
 
+class neut_handler(webapp2.RequestHandler):
+    def post(self):
+        neutral_quote = self.request.get("out")
+        letter = self.request.get("message")
+        name = self.request.get("username")
+        input_post = post_model(text = letter, user = name, out = neutral_quote)
+        input_post.put()
+
 class AboutPage(webapp2.RequestHandler):
     def get(self):
         about_template = jinja_environment.get_template("templates/about.html")
@@ -73,5 +78,10 @@ class WaysToHappyPage(webapp2.RequestHandler):
         self.response.write(about_template.render())
 
 app = webapp2.WSGIApplication([
-    ('/', FrontPage),
+<<<<<<< HEAD
+    ('/', FrontPage),("/neut", neut_handler),
+    ('/past', PastPostsPage), ("/about", AboutPage), ("/waystohappy", WaysToHappyPage)], debug=True)
+=======
+    ('/front', FrontPage),('/', MainPage),
 ('/past', PastPostsPage), ("/about", AboutPage), ("/waystohappy", WaysToHappyPage)], debug=True)
+>>>>>>> 3aa5f4cc1c9f5c73c3d75d1e502484f67ef62750
