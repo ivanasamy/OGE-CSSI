@@ -142,9 +142,9 @@ p {
 }
 
 #dropDownBtn{
-  position:absolute;
-  top: 400px;
-  left: 620px;
+  position:relative;
+  top: 410px;
+  
 
 }
 
