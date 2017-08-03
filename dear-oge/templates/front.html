@@ -52,7 +52,16 @@
     <div id="responseBox">
       <h2> Oge Says:</h2>
       <div id="output">
+        {% if answer == "NEUTRAL" %}
+          Loading
+          <script>
+          $( document ).ready(function () {
+            neutral_call();
+            });
+          </script>
+        {% else %}
         {{answer}}
+        {% endif %}
       </div>
     </div>
   </div>
