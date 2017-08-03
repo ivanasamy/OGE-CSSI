@@ -25,6 +25,13 @@ def oge_response(response):
                  method='POST',
                  payload=json.dumps(request_body)
                )
+    """url2 = "https://steakovercooked.com/api/fortune/"
+    neut_call = urlfetch.fetch(
+                 url,
+                 ,
+
+    )
+    """
     sentiment_json = json.loads(response.content)
     sentiment = sentiment_json["documents"][0]["score"]
 
@@ -51,7 +58,7 @@ def oge_response(response):
     if sentiment > 0 and sentiment <0.3:
         return negative_responses[random.randint(0, len(negative_responses)-1)]
     elif sentiment >= 0.3 and sentiment <0.7:
-        return neutral_responses[random.randint(0, len(neutral_responses)-1)]
+        return neutral_responses[random.randint(0, len(negative_responses)-1)]
     else:
         return positive_responses[random.randint(0, len(positive_responses)-1)]
 
