@@ -4,7 +4,9 @@ function question() {
   $("output").click(oge_response)
 }
 
-
+$(document).ready(function() {
+    $("#my_audio").get(0).play();
+});
 
 $(function(){
   $("#dropDownBtn").on("change",function() {
