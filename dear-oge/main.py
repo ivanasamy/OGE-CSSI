@@ -31,9 +31,9 @@ class FrontPage(webapp2.RequestHandler):
         letter = self.request.get("message")
         name = self.request.get("username")
         answer = oge_response(letter)
+        front_template = jinja_environment.get_template("templates/front.html")
         input_post = post_model(text = letter, user = name, out = answer)
         input_post.put()
-        front_template = jinja_environment.get_template("templates/front.html")
         self.response.write(front_template.render({'answer': answer}))
 
 class PastPosts(ndb.Model):
