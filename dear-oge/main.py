@@ -16,6 +16,7 @@
 #
 from models import post_model
 import jinja2
+import json
 import os
 import webapp2
 from OGE import oge_response
@@ -61,10 +62,12 @@ class PastPostsPage(webapp2.RequestHandler):
 
 class neut_handler(webapp2.RequestHandler):
     def post(self):
-        neutral_quote = self.request.get("out")
-        letter = self.request.get("message")
-        name = self.request.get("username")
-        input_post = post_model(text = letter, user = name, out = neutral_quote)
+        whole  = self.request.body
+        better_whole = json.loads(whole)
+        quote = better_whole["out"]
+        letter = better_whole["text"]
+        name = better_whole["user"]
+        input_post = post_model(text = letter, user = name, out = quote)
         input_post.put()
 
 class AboutPage(webapp2.RequestHandler):
@@ -78,10 +81,5 @@ class WaysToHappyPage(webapp2.RequestHandler):
         self.response.write(about_template.render())
 
 app = webapp2.WSGIApplication([
-<<<<<<< HEAD
     ('/', FrontPage),("/neut", neut_handler),
     ('/past', PastPostsPage), ("/about", AboutPage), ("/waystohappy", WaysToHappyPage)], debug=True)
-=======
-    ('/front', FrontPage),('/', MainPage),
-('/past', PastPostsPage), ("/about", AboutPage), ("/waystohappy", WaysToHappyPage)], debug=True)
->>>>>>> 3aa5f4cc1c9f5c73c3d75d1e502484f67ef62750

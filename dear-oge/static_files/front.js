@@ -2,7 +2,7 @@ function question() {
   $("output").click(oge_response)
 }
 
-}
+
 
 
 function neutral_call(user, text) {
