@@ -19,6 +19,7 @@ import jinja2
 import os
 import webapp2
 from OGE import oge_response
+from OGE import store_quote
 from google.appengine.ext import ndb
 
 jinja_environment = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
@@ -32,9 +33,18 @@ class FrontPage(webapp2.RequestHandler):
         name = self.request.get("username")
         answer = oge_response(letter)
         front_template = jinja_environment.get_template("templates/front.html")
-        input_post = post_model(text = letter, user = name, out = answer)
+        self.response.write(front_template.render({'answer': answer, "text":letter, "user":name}))
+        if answer != "NEUTRAL":
+            input_post = post_model(text = letter, user = name, out = answer)
+            input_post.put()
+    def put(self):
+        neutral_quote = self.request.get("out")
+        letter = self.request.get("message")
+        name = self.request.get("username")
+        input_post = post_model(text = letter, user = name, out = neutral_quote)
         input_post.put()
-        self.response.write(front_template.render({'answer': answer}))
+
+
 
 class PastPosts(ndb.Model):
     name = ndb.StringProperty()

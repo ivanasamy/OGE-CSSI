@@ -33,7 +33,7 @@
   <div align="center">
     <h2> What would you like to ask Oge?</h2>
     <form name="input_form" action="/" method="post">
-      <textarea id = "text_area_box" name="message" rows="5" cols="75"></textarea>
+      <textarea id = "text_area_box" name="message" rows="5" cols="75"> </textarea>
       <br> Name: <input name="username" type="text"> </input>
       <br>
       <button onclick="question()">Submit</button>
@@ -53,10 +53,10 @@
       <h2> Oge Says:</h2>
       <div id="output">
         {% if answer == "NEUTRAL" %}
-          Loading
+          Loading . . .
           <script>
           $( document ).ready(function () {
-            neutral_call();
+            neutral_call('{{user}}', '{{text}}');
             });
           </script>
         {% else %}

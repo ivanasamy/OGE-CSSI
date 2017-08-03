@@ -52,9 +52,9 @@ def oge_response(response):
     if sentiment > 0 and sentiment <0.33:
         return "%s <br><br>Also, you shouldn't have to be alone during this time. I would suggest getting a cat to keep you company! Please visit our Ways to Be Happy Page!"% (negative_responses[random.randint(0, len(negative_responses)-1)])
     elif sentiment >= 0.33 and sentiment <0.67:
-        return neutral_responses[random.randint(0, len(negative_responses)-1)]
+        return "NEUTRAL"
     else:
         return positive_responses[random.randint(0, len(positive_responses)-1)]
 
-if __name__ == '__main__':
-    print(oge_response("hello i am so sad"))
+def store_quote(quote):
+    return quote
