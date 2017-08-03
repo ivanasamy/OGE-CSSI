@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" href="/resources/front.css" />
   <title>About</title>
   <script src="/resources/front.js"></script>
@@ -16,13 +17,13 @@
 
   <div align ="center">
     <select id="dropDownBtn">
+      <option value = "select">Select from below</option>
       <option value="Adventure">Adventure and Travel</option>
       <option value="Animals">Animals and Pets</option>
-      <option value="Nature">Nature</option>
       <option value="Food">Food</option>
-      <option value="Thrifty">Thrifty and Nifty</option>
-      <option value="Retail">Retail Therapy</option>
-      <option value="Music">Music</option>
+      <option value="Games">Games</option>
+      <option value="Thrifty">Thrifty and Retail</option>
+      <option value="Media">Media/Culture</option>
   </select>
 </div>
 
@@ -52,41 +53,76 @@
   </div>
 
   <br>
-
-  <div align= "center">
+<div class = "links Adventure" style ="display:none">
     <ol>
-      <li><a href="https://www.cityofchicago.org/city/en/depts/cacc/provdrs/care/svcs/adoption.html">Adopt a new friend</a></li>
-      <br>
-      <br>
-      <li><a href="http://www.food.com/how-to/make-homemade-pasta-42">Make some pasta</a></li>
-      <br>
-      <br>
-      <li><a href="http://www.freeflys.com/MoreFreeSamples">Enjoy some free stuff</a></li>
-      <br>
-      <br>
-      <li><a href="http://www.imdb.com/title/tt0261392/">Watch a funny movie. Here's a good one</a></li>
-      <br>
-      <br>
-      <li><a href="https://www.roughguides.com/gallery/budget-trips-20-of-the-cheapest-places-to-travel/">Travel somewhere nice. Here's nice (and cheap) ideas</a></li>
-      <br>
-      <br>
-      <li><a href="https://media.giphy.com/media/wJNGA01o1Zxp6/giphy.gif">Realize you are not Donald Trump</a></li>
-      <br>
-      <br>
-      <li><a href="http://6dollarshirts.com/">Buy a shirt for 6 bucks(consumer therapy)</a></li>
-      <br>
-      <br>
-      <li><a href="https://www.thrillist.com/entertainment/chicago/free-things-to-do-in-chicago">Experience fun things. Here are suggestions for Chicago</a></li>
+      <li><a href="https://www.thrillist.com/entertainment/chicago/free-things-to-do-in-chicago">Experience fun things in Chicago</a></li>
       <br>
       <br>
       <li><a href="http://thecmf.com/">Go to a metal show in Chicago </a></li>
       <br>
       <br>
+      <li><a href="https://www.roughguides.com/gallery/budget-trips-20-of-the-cheapest-places-to-travel/">Travel somewhere nice. Here's nice (and cheap) ideas</a></li>
+    </ol>
+</div>
+
+<div class = "links Animals" style ="display:none">
+  <ol>
+    <li><a href="https://www.cityofchicago.org/city/en/depts/cacc/provdrs/care/svcs/adoption.html">Adopt a new friend</a></li>
+    <br>
+    <br>
+  </ol>
+</div>
+
+<div class = "links Food" style= "display:none">
+    <ol>
+      <li><a href="http://www.food.com/how-to/make-homemade-pasta-42">Make some pasta</a></li>
+
+    </ol>
+</div>
+
+<div class = "links Games" style= "display:none">
+    <ol>
       <li><a href="http://www.free80sarcade.com/galaga.php">Play Galaga</a></li>
+
+
+    </ol>
+</div>
+
+<div class = "links Thrifty" style= "display:none">
+    <ol>
+      <li><a href="http://6dollarshirts.com/">Buy a shirt for $6</a></li>
       <br>
+      <br>
+      <li><a href="http://www.freeflys.com/MoreFreeSamples">Enjoy some free stuff</a></li>
+    </ol>
+</div>
+
+<div class = "links Media" style= "display:none">
+    <ol>
+      <li><a href="http://www.imdb.com/title/tt0261392/">Watch a funny movie. Here's a good one</a></li>
       <br>
     </ol>
-  </div>
+</div>
+
+
+
+
+
+  <div align= "center", class= "links" style="display:none">
+    <ol>
+      <li><a href="https://www.cityofchicago.org/city/en/depts/cacc/provdrs/care/svcs/adoption.html">Adopt a new friend</a></li>
+      <li><a href="https://www.thrillist.com/entertainment/chicago/free-things-to-do-in-chicago">Experience fun things in Chicago</a></li>
+      <li><a href="http://thecmf.com/">Go to a metal show in Chicago </a></li>
+      <li><a href="https://www.roughguides.com/gallery/budget-trips-20-of-the-cheapest-places-to-travel/">Travel somewhere nice. Here's nice (and cheap) ideas</a></li>
+      <li><a href="http://www.food.com/how-to/make-homemade-pasta-42">Make some pasta</a></li>
+      <li><a href="http://www.freeflys.com/MoreFreeSamples">Enjoy some free stuff</a></li>
+      <li><a href="http://www.imdb.com/title/tt0261392/">Watch a funny movie. Here's a good one</a></li>
+      <li><a href="https://www.roughguides.com/gallery/budget-trips-20-of-the-cheapest-places-to-travel/">Travel somewhere nice. Here's nice (and cheap) ideas</a></li>
+      <li><a href="http://6dollarshirts.com/">Buy a shirt for 6 bucks(consumer therapy)</a></li>
+      <li><a href="http://www.free80sarcade.com/galaga.php">Play Galaga</a></li>
+   </ol>
+</div>
+
 
   <div align="center"><img src="https://images.pexels.com/photos/45170/kittens-cat-cat-puppy-rush-45170.jpeg?h=350&auto=compress&cs=tinysrgb"></div>
 

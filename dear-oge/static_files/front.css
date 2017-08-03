@@ -41,6 +41,16 @@ h1 {
   padding-bottom: 40px;
 }
 
+ol{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  margin-top: 20px;
+  font-family: cursive;
+  color: #DDD5D0;
+  text-align: center;
+}
 
 
 
@@ -144,8 +154,6 @@ p {
 #dropDownBtn{
   position:relative;
   top: 410px;
-  
-
 }
 
 
