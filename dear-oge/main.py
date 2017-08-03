@@ -81,5 +81,5 @@ class WaysToHappyPage(webapp2.RequestHandler):
         self.response.write(about_template.render())
 
 app = webapp2.WSGIApplication([
-    ('/', FrontPage),("/neut", neut_handler),
+    ('/front', FrontPage),("/neut", neut_handler), ('/', MainPage),
     ('/past', PastPostsPage), ("/about", AboutPage), ("/waystohappy", WaysToHappyPage)], debug=True)
