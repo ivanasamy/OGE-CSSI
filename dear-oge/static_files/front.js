@@ -4,10 +4,9 @@ function question() {
   $("output").click(oge_response)
 }
 
-window.onload = function() {
-    document.getElementById("my_audio").play();
-}
-
+$(document).ready(function() {
+    $("#my_audio").get(0).play();
+});
 
 $(function(){
   $("#dropDownBtn").on("change",function() {
