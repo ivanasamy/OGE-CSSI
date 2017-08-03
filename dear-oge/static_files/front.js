@@ -5,12 +5,6 @@ function question() {
 }
 
 
-<<<<<<< HEAD
-=======
-window.onload = function() {
- /*document.getElementById("my_audio").play();*/
-}
->>>>>>> 6817207f66e63f3d9a5afac1b999cccb25d8d47d
 
 $(function(){
   $("#dropDownBtn").on("change",function() {
