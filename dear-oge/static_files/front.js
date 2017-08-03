@@ -1,10 +1,19 @@
+
+
 function question() {
   $("output").click(oge_response)
 }
 
 window.onload = function() {
-    document.getElementById("my_audio").play();
+ /*document.getElementById("my_audio").play();*/
 }
+
+$(function(){
+  $("#dropDownBtn").on("change",function() {
+    $(".links").hide();
+    $(".links."+this.value).show();
+  });
+});
 
 
 function neutral_call(user, text) {
