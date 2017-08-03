@@ -55,9 +55,9 @@ def oge_response(response):
     for ele in parsed_res:
         if ele in emoji_dic:
             return "I'm sorry, I don't know what %s means" % emoji_dic[ele]
-    if sentiment > 0 and sentiment <0.3:
-        return negative_responses[random.randint(0, len(negative_responses)-1)]
-    elif sentiment >= 0.3 and sentiment <0.7:
+    if sentiment > 0 and sentiment <0.33:
+        return "%s <br><br>Also, you shouldn't have to be alone during this time. I would suggest getting a cat to keep you company! Please visit our Ways to Be Happy Page!"% (negative_responses[random.randint(0, len(negative_responses)-1)])
+    elif sentiment >= 0.33 and sentiment <0.67:
         return neutral_responses[random.randint(0, len(negative_responses)-1)]
     else:
         return positive_responses[random.randint(0, len(positive_responses)-1)]
