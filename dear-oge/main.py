@@ -24,11 +24,6 @@ from google.appengine.ext import ndb
 
 jinja_environment = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
-class MainPage(webapp2.RequestHandler):
-    def get(self):
-        about_template = jinja_environment.get_template("templates/main.html")
-        self.response.write(about_template.render())
-
 class FrontPage(webapp2.RequestHandler):
     def get(self):
         front_template = jinja_environment.get_template("templates/front.html")
@@ -81,5 +76,5 @@ class WaysToHappyPage(webapp2.RequestHandler):
         self.response.write(about_template.render())
 
 app = webapp2.WSGIApplication([
-    ('/front', FrontPage),("/neut", neut_handler), ('/', MainPage),
+    ('/', FrontPage),("/neut", neut_handler),
     ('/past', PastPostsPage), ("/about", AboutPage), ("/waystohappy", WaysToHappyPage)], debug=True)
