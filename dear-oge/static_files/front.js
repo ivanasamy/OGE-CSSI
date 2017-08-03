@@ -12,15 +12,14 @@ function neutral_call(user, text) {
     $("#output").text(data);
   //  $.put("/", {out: data, user:user, text:text})
   $.ajax({
-    url: '/',
-    type: 'PUT',
+    url: '/neut',
+    type: 'POST',
     data: JSON.stringify({
       out: data, user:user, text:text
     }),
     contentType: "application/json; charset=utf-8",
     dataType   : "json",
     success: function(result) {
-        // Do something with the result
     }
 });
   }
