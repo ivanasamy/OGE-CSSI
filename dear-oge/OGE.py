@@ -4,8 +4,29 @@ import random
 import urllib
 import json
 from google.appengine.api import urlfetch
+emoji_dic = {
+    "happy": "😀",
+    "winking": "😉",
+    "kissing": "😗",
+    "smirking": "😏",
+    "crying": "😢",
+    "woman": "👩",
+    "peach": "🍑",
+    "eggplant": "🍆"
+    }
 
 headers = {'content-type': 'application/json', "Ocp-Apim-Subscription-Key": "3338f3285193465e907eb03a5b2b214a", "Accept": "application/json"}
+
+def adjust_input(i):
+    build = []
+    for ele in i:
+        if ele in emoji_dic:
+            build.append(emoji_dic[ele])
+        else:
+            build.append(ele)
+    sentence = " ".join(build)
+    return sentence
+
 
 def oge_response(response):
     parsed_res = response.split()
@@ -36,19 +57,11 @@ def oge_response(response):
     neutral_responses = ["A quote I believe applies to a lot of what we do in life is 'If something is too hard, either you are not doing it right or it is not worth doing'", "The opportunity for success is there, you just need to acknowledge its presence and grasp it" , "In anything you do, you are only as good as you think you are.", "Anything is possible when you have inner peace - Master Shifu(Kung Fu Panda)","To laugh at yourself is to love yourself - Mickey Mouse", "Sucking at something is the first step to becoming sorta good at something - Jake from Adventure Time"]
 #
     positive_responses = ["Congratulations! You seem to be happy and that’s great! Life is short so enjoying it to its fullest is something special!", "Your happiness is something to be admired! You’re so lucky that things are working out in your life and I hope that things continue to work out!", "That’s wonderful! As an experienced giver of relationship advice, it is always great to hear about people whose lives are filled with joy", "I’m so happy for you! Your joy brings me joy as well!", "Good for you! May happiness forever be in your life!"]
-    emoji_dic = {
-    "happy": "😀",
-    "winking": "😉",
-    "kissing": "😗",
-    "smirking": "😏",
-    "crying": "😢",
-    "woman": "👩",
-    "peach": "🍑",
-    "🍆": "eggplant"
-    }
+
+
     for ele in parsed_res:
         if ele in emoji_dic:
-            return "I'm sorry, I don't know what %s means" % emoji_dic[ele]
+            return "I'm sorry, did you mean \"%s\"" % (adjust_input(parsed_res))
     if sentiment > 0 and sentiment <0.33:
         return "%s <br><br>Also, you shouldn't have to be alone during this time. I would suggest getting a cat to keep you company! Please visit our Ways to Be Happy Page!"% (negative_responses[random.randint(0, len(negative_responses)-1)])
     elif sentiment >= 0.33 and sentiment <0.67:
