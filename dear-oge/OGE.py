@@ -20,8 +20,9 @@ headers = {'content-type': 'application/json', "Ocp-Apim-Subscription-Key": "333
 def adjust_input(i):
     build = []
     for ele in i:
-        if ele in emoji_dic:
-            build.append(emoji_dic[ele])
+        low = ele.lower()
+        if low in emoji_dic:
+            build.append(emoji_dic[low])
         else:
             build.append(ele)
     sentence = " ".join(build)
@@ -60,7 +61,7 @@ def oge_response(response):
 
 
     for ele in parsed_res:
-        if ele in emoji_dic:
+        if ele.lower() in emoji_dic:
             return "I'm sorry, did you mean \"%s\"" % (adjust_input(parsed_res))
     if sentiment > 0 and sentiment <0.33:
         return "%s <br><br>Also, you shouldn't have to be alone during this time. I would suggest getting a cat to keep you company! Please visit our Ways to Be Happy Page!"% (negative_responses[random.randint(0, len(negative_responses)-1)])
